@@ -4,6 +4,7 @@
   "description": "This repo contains an example of structured data extraction using a multimodal LLM, and its visualization with a simple D3.js code.",
   "main": "script.js",
   "scripts": {
+    "dev": "vite",
     "test": "vitest"
   },
   "repository": {
