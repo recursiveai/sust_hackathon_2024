@@ -2,7 +2,6 @@
 <html>
 <head>
   <title>Stacked Bar Chart</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
   <style>
     /* Define styles for the SVG container, bars, labels, etc. */
         #chart {
@@ -23,7 +22,12 @@
   </style>
 </head>
 <body>
-  <div id="chart"></div>
-  <script src="script.js"></script>
+  <h1>Recursive Sustainability Hackathon 2024-05-07</h1>
+  <div>
+    Stacked Bar Chart
+    <div id="chart"></div>
+  </div>
+  <div class="debug-message">Debug: If there is nothing _visible_ above this line, check the console for errors</div>
+  <script type="module" src="./script.js"></script>
 </body>
 </html>

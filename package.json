@@ -1,0 +1,23 @@
+{
+  "name": "sust_hackathon_2024",
+  "version": "1.0.0",
+  "description": "This repo contains an example of structured data extraction using a multimodal LLM, and its visualization with a simple D3.js code.",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/recursiveai/sust_hackathon_2024"
+  },
+  "author": "Tiago Ramalho",
+  "license": "ISC",
+  "devDependencies": {
+    "d3": "^7.9.0",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "vite": "^5.2.11"
+  }
+}
