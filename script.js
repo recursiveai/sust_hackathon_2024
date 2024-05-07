@@ -1,3 +1,5 @@
+import * as d3 from "d3"
+
 export function parseData(data) {
     const dataset = [];
     Object.keys(data).forEach((year) => {
