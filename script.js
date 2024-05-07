@@ -10,11 +10,11 @@ export function parseData(data) {
             });
             dataset.push(obj);
         });
-    } catch (e) {
-        console.error(`There was an error parsing the data: ${e}`);
-        throw new Error(`There was an error parsing the data: ${e}`);
+        return dataset;
+    } catch ({ name, message }) {
+        const text = `There was an error parsing the data: ${name}, ${message}`;
+        throw new Error(text);
     }
-    return dataset;
 }
 
 d3.json('data/forest.json')
