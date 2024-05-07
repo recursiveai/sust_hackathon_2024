@@ -1,3 +1,15 @@
+export function parseData(data) {
+    const dataset = [];
+    Object.keys(data).forEach((year) => {
+        const obj = { year };
+        Object.entries(data[year]).forEach(([key, value]) => {
+            obj[key] = value;
+        });
+        dataset.push(obj);
+    });
+    return dataset;
+}
+
 d3.json('data/forest.json').then((data) => {
     // Set up SVG container and dimensions
     const margin = { top: 20, right: 60, bottom: 50, left: 60 };
@@ -12,14 +24,7 @@ d3.json('data/forest.json').then((data) => {
         .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
     // Convert the data to an array of objects and prepare for stacking
-    const dataset = [];
-    Object.keys(data).forEach((year) => {
-        const obj = { year };
-        Object.entries(data[year]).forEach(([key, value]) => {
-            obj[key] = value;
-        });
-        dataset.push(obj);
-    });
+    const dataset = parseData(data);
 
     // Process data for stacking
     const keys = Object.keys(dataset[0]).filter((key) => key !== 'year');
